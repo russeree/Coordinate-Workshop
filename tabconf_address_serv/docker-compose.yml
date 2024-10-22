@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  faucet-portal:
+    build: .
+    container_name: testnet-faucet-portal
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    environment:
+      - FLASK_ENV=production
+    networks:
+      - faucet-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  faucet-network:
+    driver: bridge
