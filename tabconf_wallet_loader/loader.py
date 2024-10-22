@@ -50,9 +50,9 @@ with open(log_file, 'w') as f:
         f.write(f"{name}: {address}\n")
         print(f"Generated address for {name}: {address}")
 
-        # Unload wallet
-        rpc_call('unloadwallet', [name])
-        print(f"Unloaded wallet: {name}")
+        # Unload wallet - DEPRECATED
+        # rpc_call('unloadwallet', [name])
+        # print(f"Unloaded wallet: {name}")
         print("---")
 
 print(f"Wallet names and addresses have been logged to {log_file}")
