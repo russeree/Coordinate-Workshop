@@ -7,8 +7,8 @@ import hashlib
 from decimal import Decimal, ROUND_UP
 
 # Bitcoin node RPC configuration
-rpc_user = "tabconf"
-rpc_password = "bitcoin"
+rpc_user = "username"
+rpc_password = "password"
 rpc_url = "http://tabconf.testnet4.io:38332"
 
 # Global variables
