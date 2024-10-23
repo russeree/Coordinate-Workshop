@@ -9,29 +9,19 @@ import hashlib
 # Bitcoin node RPC configuration
 rpc_user = "tabconf"
 rpc_password = "bitcoin"
-rpc_url = "http://localhost:18332"  # Default Bitcoin RPC port
+rpc_url = "http://tabconf.testnet4.io:38332"
 
-# Global variable to store wallet names
 # Global variables
 WALLET_LIST = []
 ASSET_CONTROLLER_ADDRESS =  "tc1qkrtry6vzjt9kmjtj6rsfng0vcmxze453yes5lf"
 ASSET_RECEIVE_ADDRESS = "tc1q9p9lgxtg88krma7sdf278ya8nsjsnwejhyf7ca"
 IMAGE_DATA_URL = None
 IMAGE_SHA256 = None
-
-def load_image_and_hash():
-   global IMAGE_DATA_URL, IMAGE_SHA256
-   try:
-       with open("asset.png", "rb") as image_file:
-           image_base64 = base64.b64encode(image_file.read()).decode('utf-8')
-           IMAGE_DATA_URL = f"data:image/png;base64,{image_base64}"
-           IMAGE_SHA256 = hashlib.sha256(IMAGE_DATA_URL.encode('utf-8')).hexdigest()
-           return True
-   except Exception as e:
-       print(f"Error loading image: {e}")
-       return False
    
 def get_available_wallets():
+    '''
+    Creates a global list of available wallet files Coordinate can utilize. Wallets listed may not have funds.
+    '''
     global WALLET_LIST
     payload = {
         "method": "listwalletdir",
@@ -55,6 +45,20 @@ def get_available_wallets():
         print(f"Error connecting to Bitcoin node: {e}")
         return False
 
+def load_image_and_hash():
+   '''
+   Loads an asset as hex and also takes the SHA256 Hash of that file to use a payload and payload data !!!DEPRECATED!!!
+   '''
+   global IMAGE_DATA_URL, IMAGE_SHA256
+   try:
+       with open("asset.png", "rb") as image_file:
+           image_base64 = base64.b64encode(image_file.read()).decode('utf-8')
+           IMAGE_DATA_URL = f"data:image/png;base64,{image_base64}"
+           IMAGE_SHA256 = hashlib.sha256(IMAGE_DATA_URL.encode('utf-8')).hexdigest()
+           return True
+   except Exception as e:
+       print(f"Error loading image: {e}")
+       return False
 
 def get_unspent_from_wallet(wallet_name):
     """Get the first unspent output from a wallet"""

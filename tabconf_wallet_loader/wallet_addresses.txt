@@ -1,49 +1,49 @@
-abandon: tc1q4dzv4glhpqzyy0ef3txpahd7xhazezpcwwrm4c - Sent
-ability: tc1q8048vn24npcu2envyndzhj4lgz65gw5tugshn2 - Sent
-able: tc1qsdqrnt63g7wmzxxxa4e9c3t4ju47zzz3cnls39 - Sent
-about: tc1qc48g6wam4l8fes309mdgadlpaznz9ycheskj76 - Sent
-above: tc1qy3ashv659mxnhlrz5u459h8jxq235ftkq0arf9 - Sent
-absent: tc1qxv63zu50wfrtt2udwrpe0n3sj0rstnv32aqc6d - Sent
-absorb: tc1qvvgplgle2m5vwxlmqsnmaztzdd2fndhcnll28p - Sent
-abstract: tc1q8xqjaa4upaqe3k9tt3t7pdhyyvd58hsd5yswpl - Sent
-absurd: tc1qlvqtqmj4syqysnmjk64qjequm7efnxaj3cjcc9 - Sent
-abuse: tc1qvc7znhc5nknpmxjt2w6uffv87qjvllkvxw2a03 - Sent
-access: tc1qjys08y5w99pd3ytpstxpurymx54h3lq52tg5dh - Sent
-accident: tc1q033zk37jdt7zvtexhfrjjuqfy37up84dnlre0m - Sent
-account: tc1qq8tymperjyel7rw28wzgu5m0mkgm8cwkkkrc76 - Sent
-accuse: tc1qtx9uv6ndydrrz55htzf2jl4xs5s3vxlnv8yj2j - Sent
-achieve: tc1q7ldqwd7l5f3903gzs742yx8sw83ymmefqns5ge - Sent
-acid: tc1qhezfr2g48smhk0tf0tfc6jq9uzh26mtsnr46ja - Sent
-acoustic: tc1qapsnsum8q5gv6hs4nleeqdq4s42zkx40cmq2ym - Sent
-acquire: tc1qrn7xzzq8nggjz455cgzpzf80gl9rl7wv2qgkjc - Sent
-across: tc1q2vz5n2dl9eckgfzdlg8l79vzk9sy0dcksz6ctr - Sent
-act: tc1q2ggypm668ky58p3akw55cjl80xfcfv5khp2pc0 - Sent
-action: tc1qcnuwetd9t59e68qc5rtxn7mszwxgdhuw8yzcrh
-actor: tc1q4l9aznlc3ueey9u2rrchk055c7v72qtrj3l47e
-actress: tc1qy9pwlj07mfcaxhharj2p3r2htldmylr02tkals
-actual: tc1q0t369h68yal4s2xjra69k232jvznh47f5ztlwq
-adapt: tc1qz6kc90ht0zts46yuku8axqfuwcj7szlv3h25na
-add: tc1q8q0fc3dtm4tjvufcrxspd60t9z2ycf4sx9ftal
-addict: tc1qzrt3cupndn5vhn0ykgtycd858z2ejmd4ueyyav
-address: tc1qegw57zrld8zqgll7ql8zq7aunvudhy2l5eq530
-adjust: tc1qttc84vphp0ltx8ze5sux9yvn7ja92r5uhh5m32
-admit: tc1q863ngxulk4egveq40umc5uq2hhaufx5y54smvl
-adult: tc1qpnc0nsng4akcsaeqjnwkgerretmuw7umhf6xst
-advance: tc1q9vcjvqr8rtnt60xhv5csx0vwxkyqkva2yyfl5w
-advice: tc1qf7t95pqxrvhagzktrf65vmg9a53nkrfrqgng5j
-aerobic: tc1q8kaupj0vr9drh0ahapee9v9akngmuacks696wa - Sent
-affair: tc1qz3rrtpm0nljl6as0frmsfeagta20adewpetman
-afford: tc1q66fpnwamem3qxlmvnvjzf9jkz2y5wv8mazr8rv
-afraid: tc1qa5e5c7qcnsueqf07d4v7us0dw5wp9uk3cmknyr
-again: tc1qvjzalyetnt5tzjqy6g4xyswxjtkpguu4jp6nnp
-age: tc1qy4fnlhmcjnnmjdrzfur45r04keu7a6grghvs3u
-agent: tc1qcauw6jxx3ylz5f4932xwyf08vxnyfxnavadqjr
-agree: tc1qn8k4fn2kqxwqzh208lzuscw3xgxp35xn69yxky
-ahead: tc1qtl284utccsxdpj0peftnqte8ycaw7z4m2503n2
-aim: tc1qwyf0626qp83c5jfxlru0055gghgf9xhl6ywkap
-air: tc1qsl0nhr9fp40l4zmnyyf2h4uynyzsmhj70ft2xq
-airport: tc1q7y568awvu7ffjf8cmtj0tqwhtrytqmkat3ghec
-aisle: tc1qvdqfqqw83hrjxsfc92x4ky36w8038atz7whgm4
-alarm: tc1qt0vmaehdzqgj762mfy2q9y768es9plu5vpxau5
-album: tc1q5arz8z5ccwns7eeds4hjdmxjjckg7els3fqu29
-alcohol: tc1q6tfkesr38kfdjx4mzvz84zdz3cm8mxnae3ncr4 - Sent
+abandon: tc1qdjdjfx6s8mqwemyyjnuap6egvkr9ptxn46l5n9
+ability: None
+able: None
+about: None
+above: None
+absent: None
+absorb: None
+abstract: None
+absurd: None
+abuse: None
+access: None
+accident: None
+account: None
+accuse: None
+achieve: None
+acid: None
+acoustic: None
+acquire: None
+across: None
+act: None
+action: None
+actor: None
+actress: None
+actual: None
+adapt: None
+add: None
+addict: None
+address: None
+adjust: None
+admit: None
+adult: None
+advance: None
+advice: None
+aerobic: None
+affair: None
+afford: None
+afraid: None
+again: None
+age: None
+agent: None
+agree: None
+ahead: None
+aim: None
+air: None
+airport: None
+aisle: None
+alarm: None
+album: None
+alcohol: None

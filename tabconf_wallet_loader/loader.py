@@ -2,9 +2,9 @@ import requests
 import json
 
 # Bitcoin Core RPC connection details
-rpc_user = 'tabconf'
-rpc_password = 'bitcoin'
-rpc_url = 'http://localhost:18332'  # Default testnet RPC port
+rpc_user = "tabconf"
+rpc_password = "bitcoin"
+rpc_url = "http://tabconf.testnet4.io:38332"
 
 # List of wallet names
 wallet_names = [
