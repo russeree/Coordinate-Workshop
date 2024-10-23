@@ -1,4 +1,4 @@
-# TABConf6 - Coordinate Workshop
+# TABConf 6 - Coordinate Workshop
 This workshop is to better explain and define the capabilities and tradeoffs of Coordinate; A Bitcoin L2 Sidechain. What this document doesn't cover is the security side of L2s on Bitcoin and the complete feature set of Coordinate. Instead focusing on the interactions that a user can have with a Coordinate node and existing infrastructure. 
 
 ## Hello World - Overview 🌎
