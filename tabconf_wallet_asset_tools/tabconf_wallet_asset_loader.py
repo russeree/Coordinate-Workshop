@@ -214,80 +214,112 @@ def sign_raw_transaction(wallet_name, tx_hex):
         print(f"Error signing transaction: {e}")
         return None
 
+def get_wallet_balance(wallet_name):
+    """Get the balance of a specific wallet"""
+    try:
+        payload = {
+            "method": "getbalance",
+            "params": [],
+            "jsonrpc": "2.0",
+            "id": 1
+        }
+        
+        response = requests.post(
+            f"{rpc_url}/wallet/{wallet_name}",
+            auth=HTTPBasicAuth(rpc_user, rpc_password),
+            json=payload
+        )
+        return response.json().get('result', 0)
+    except requests.exceptions.RequestException as e:
+        print(f"Error getting wallet balance: {e}")
+        return None
+
 def main():
-   print("Loading image...")
-   if not load_image_and_hash():
-       print("Failed to load image. Exiting.")
-       return
-   
-   print(f"Image Data/URI SHA256: {IMAGE_SHA256}")
+    print("Loading image...")
+    if not load_image_and_hash():
+        print("Failed to load image. Exiting.")
+        return
+    
+    print(f"Image Data/URI SHA256: {IMAGE_SHA256}")
 
-   input("Press Enter to continue to transaction creation...")
+    print("\nGetting available wallets...")
+    if not get_available_wallets():
+        print("Failed to retrieve wallet list. Exiting.")
+        return
 
-   print("Getting available wallets...")
-   if not get_available_wallets():
-       print("Failed to retrieve wallet list. Exiting.")
-       return
+    # Display available wallets and their balances
+    print("\nAvailable wallets:")
+    for i, wallet_name in enumerate(WALLET_LIST, 1):
+        balance = get_wallet_balance(wallet_name)
+        print(f"{i}. {wallet_name} (Balance: {balance} BTC)")
 
-   print(f"\nFound {len(WALLET_LIST)} wallets")
-   
-   for wallet_name in WALLET_LIST:
-       print(f"\nProcessing wallet: {wallet_name}")
-       
-       # Get unspent output from wallet
-       utxo = get_unspent_from_wallet(wallet_name)
-       if not utxo:
-           print(f"No unspent outputs found in wallet {wallet_name}, skipping...")
-           continue
+    # Let user select a wallet
+    while True:
+        try:
+            wallet_choice = input("\nEnter the number of the wallet you want to use: ")
+            wallet_index = int(wallet_choice) - 1
+            if 0 <= wallet_index < len(WALLET_LIST):
+                selected_wallet = WALLET_LIST[wallet_index]
+                break
+            else:
+                print("Invalid selection. Please try again.")
+        except ValueError:
+            print("Please enter a valid number.")
 
-       # Create the asset transaction
-       print("Creating asset transaction...")
-       unsigned_hex = create_asset_transaction(wallet_name, utxo)
-       
-       if unsigned_hex:
-           print("\nUnsigned transaction created successfully!")
-           input("\nPress Enter to sign the transaction...")
-           
-           signed_hex = sign_raw_transaction(wallet_name, unsigned_hex)
-           if signed_hex:
-               print("\nTransaction signed successfully!")
-               print("\n" + "="*50)
-               print("Final Signed Transaction Hex:")
-               print("="*50)
-               print(signed_hex)
-               print("="*50)
-               print("\nCopy the hex above to use with sendrawtransaction")
-               
-               choice = input("\nPress 1 to broadcast transaction, anything else to skip: ")
-               if choice == "1":
-                   try:
-                       payload = {
-                           "method": "sendrawtransaction",
-                           "params": [signed_hex],
-                           "jsonrpc": "1.0",
-                           "id": 1
-                       }
-                       response = requests.post(
-                           rpc_url,
-                           auth=HTTPBasicAuth(rpc_user, rpc_password),
-                           json=payload
-                       )
-                       result = response.json()
-                       if 'result' in result:
-                           print(f"\nTransaction broadcast successfully!")
-                           print(f"Transaction ID: {result['result']}")
-                       else:
-                           print(f"\nFailed to broadcast transaction: {result.get('error', 'Unknown error')}")
-                   except Exception as e:
-                       print(f"\nError broadcasting transaction: {e}")
-               else:
-                   print("\nSkipping transaction broadcast")
-               
-               input("\nPress Enter to continue with the next wallet...")
-           else:
-               print("Failed to sign transaction")
-       else:
-           print(f"Failed to create transaction for wallet {wallet_name}")
+    print(f"\nSelected wallet: {selected_wallet}")
+    
+    # Get unspent output from wallet
+    utxo = get_unspent_from_wallet(selected_wallet)
+    if not utxo:
+        print(f"No unspent outputs found in wallet {selected_wallet}, exiting...")
+        return
+
+    # Create the asset transaction
+    print("Creating asset transaction...")
+    unsigned_hex = create_asset_transaction(selected_wallet, utxo)
+    
+    if unsigned_hex:
+        print("\nUnsigned transaction created successfully!")
+        input("\nPress Enter to sign the transaction...")
+        
+        signed_hex = sign_raw_transaction(selected_wallet, unsigned_hex)
+        if signed_hex:
+            print("\nTransaction signed successfully!")
+            print("\n" + "="*50)
+            print("Final Signed Transaction Hex:")
+            print("="*50)
+            print(signed_hex)
+            print("="*50)
+            print("\nCopy the hex above to use with sendrawtransaction")
+            
+            choice = input("\nPress 1 to broadcast transaction, anything else to skip: ")
+            if choice == "1":
+                try:
+                    payload = {
+                        "method": "sendrawtransaction",
+                        "params": [signed_hex],
+                        "jsonrpc": "1.0",
+                        "id": 1
+                    }
+                    response = requests.post(
+                        rpc_url,
+                        auth=HTTPBasicAuth(rpc_user, rpc_password),
+                        json=payload
+                    )
+                    result = response.json()
+                    if 'result' in result:
+                        print(f"\nTransaction broadcast successfully!")
+                        print(f"Transaction ID: {result['result']}")
+                    else:
+                        print(f"\nFailed to broadcast transaction: {result.get('error', 'Unknown error')}")
+                except Exception as e:
+                    print(f"\nError broadcasting transaction: {e}")
+            else:
+                print("\nSkipping transaction broadcast")
+        else:
+            print("Failed to sign transaction")
+    else:
+        print(f"Failed to create transaction for wallet {selected_wallet}")
 
 if __name__ == "__main__":
-   main()
+    main()

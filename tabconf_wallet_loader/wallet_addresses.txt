@@ -31,7 +31,7 @@ admit: tc1q863ngxulk4egveq40umc5uq2hhaufx5y54smvl
 adult: tc1qpnc0nsng4akcsaeqjnwkgerretmuw7umhf6xst
 advance: tc1q9vcjvqr8rtnt60xhv5csx0vwxkyqkva2yyfl5w
 advice: tc1qf7t95pqxrvhagzktrf65vmg9a53nkrfrqgng5j
-aerobic: tc1q8kaupj0vr9drh0ahapee9v9akngmuacks696wa
+aerobic: tc1q8kaupj0vr9drh0ahapee9v9akngmuacks696wa - Sent
 affair: tc1qz3rrtpm0nljl6as0frmsfeagta20adewpetman
 afford: tc1q66fpnwamem3qxlmvnvjzf9jkz2y5wv8mazr8rv
 afraid: tc1qa5e5c7qcnsueqf07d4v7us0dw5wp9uk3cmknyr
@@ -46,4 +46,4 @@ airport: tc1q7y568awvu7ffjf8cmtj0tqwhtrytqmkat3ghec
 aisle: tc1qvdqfqqw83hrjxsfc92x4ky36w8038atz7whgm4
 alarm: tc1qt0vmaehdzqgj762mfy2q9y768es9plu5vpxau5
 album: tc1q5arz8z5ccwns7eeds4hjdmxjjckg7els3fqu29
-alcohol: tc1q6tfkesr38kfdjx4mzvz84zdz3cm8mxnae3ncr4
+alcohol: tc1q6tfkesr38kfdjx4mzvz84zdz3cm8mxnae3ncr4 - Sent
