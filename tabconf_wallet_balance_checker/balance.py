@@ -4,7 +4,7 @@ import json
 # Bitcoin Core RPC connection details
 rpc_user = 'tabconf'
 rpc_password = 'bitcoin'
-rpc_base_url = 'http://localhost:18332'  # Default testnet RPC port
+rpc_base_url = 'http://testnet4.io:38332'  # Default testnet RPC port
 
 def rpc_call(method, params=[], wallet_name=None):
     headers = {'content-type': 'application/json'}
