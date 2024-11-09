@@ -69,3 +69,5 @@ This tool is pretty simple but will require some interaction.
 
 
 ## Conclusion
+
+After we have gone through all of this we have shown some of the uniquie porperties of coordinate from moving coins to asset creation.
