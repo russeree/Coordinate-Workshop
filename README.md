@@ -9,11 +9,12 @@ This workshop is to better explain and define the capabilities and tradeoffs of 
 
 ## Requirements ✅
  - Laptop
+ - [Latest Version of Python](https://www.python.org/)
  - [Chrome / Chromium](https://www.google.com/chrome/) - _brave might work?_
  - [Coordinate Browser Extension Wallet](https://chromewebstore.google.com/detail/anduro/khebhoaoppjeidmdkpdglmlhghnooijn)
 
 ## Phase One - Get your Wallet ID (BIP39)
-To get the soft introduction to Coordinate going and avoid any delays in transaction confirmation please download the [Chrome Browser Wallet](https://www.google.com/chrome/) and set it up with the defaults. For the sake of the demo and because we are dealing with Testnet Bitcoins only, security of a seed phase backup can be foregone and the wallet recreated later with a more secure seed phrase at a later time. 
+To get the soft introduction to Coordinate going and avoid any delays in transaction confirmation please download the [Chrome Browser Wallet](https://chromewebstore.google.com/detail/anduro/khebhoaoppjeidmdkpdglmlhghnooijn) and set it up with the defaults. For the sake of the demo and because we are dealing with Testnet Bitcoins only, security of a seed phase backup can be foregone and the wallet recreated later with a more secure seed phrase at a later time. 
 
 After you have create your seed phrase, please fetch your Testnet(3/4) address from the browser wallet in the Bitcoin category. *NOTE* Your Testnet3/4 address will be the same on both networks but carry a different balance depending on which network you have selected. Please also Fetch your testnet Coordinate address.
 
